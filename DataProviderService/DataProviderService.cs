@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using EddiBgsService;
 using Utilities;
 
 namespace EddiDataProviderService
@@ -76,6 +77,7 @@ namespace EddiDataProviderService
                         starSystem.stations = SetStationFactionData(stations, factions);
                         starSystem.stations = stations;
                     }
+                    starSystem = new BgsService().GetSystemPowerplay(starSystem);
                 }
 
                 starSystem = LegacyEddpService.SetLegacyData(starSystem, showInformation, showBodies, showStations);
