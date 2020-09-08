@@ -218,7 +218,7 @@ namespace UnitTests
             fakeBgsRestClient.Expect(endpoint, json, data);
             var queryList = new List<KeyValuePair<string, object>>()
             {
-                new KeyValuePair<string, object>(BgsService.FactionParameters.factionName, "")
+                new KeyValuePair<string, object>(BgsService.SystemParameters.systemName, "")
             };
 
             // Act
